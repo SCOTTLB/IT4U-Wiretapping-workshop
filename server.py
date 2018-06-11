@@ -23,7 +23,7 @@ class ThreadedServer(object):
                 data = client.recv(size)
                 if data:
                     # Set the response to echo back the recieved data
-                    response = data
+                    response = data + "1"
                     client.send(response)
                 else:
                     raise error('Client disconnected')
