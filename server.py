@@ -23,7 +23,9 @@ class ThreadedServer(object):
                 data = client.recv(size)
                 if data:
                     # Set the response to echo back the recieved data
-                    response = data + "1"
+                    response = data
+                    if data.contains("ping"):
+                        data = "Pong!"
                     client.send(response)
                 else:
                     raise error('Client disconnected')
