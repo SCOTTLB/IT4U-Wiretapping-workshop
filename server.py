@@ -23,7 +23,8 @@ class ThreadedServer(object):
             try:
                 data = client.recv(size)
                 if data:
-		    print("Got data!:"+address)
+		    print("Got data!")
+		    print(address)
                     # Set the response to echo back the recieved data
                     response = "Listening the wrong way!"
                     if data.contains("ping"):
@@ -37,7 +38,7 @@ class ThreadedServer(object):
 
 if __name__ == "__main__":
     while True:
-        port_num = input("Port? ")
+        port_num = 1337
         try:
             port_num = int(port_num)
             break
