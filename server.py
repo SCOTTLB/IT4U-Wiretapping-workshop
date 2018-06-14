@@ -24,7 +24,7 @@ class ThreadedServer(object):
                 if data:
 		    print("Got data!")
                     # Set the response to echo back the recieved data
-                    response = data
+                    response = "Listening the wrong way!"
                     if data.contains("ping"):
                         response = "Pong!"
                     client.send(response)
