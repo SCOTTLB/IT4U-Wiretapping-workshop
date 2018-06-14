@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import socket,sys,time
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE, SIG_DFL)
