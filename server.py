@@ -22,6 +22,7 @@ class ThreadedServer(object):
             try:
                 data = client.recv(size)
                 if data:
+		    print("Got data!")
                     # Set the response to echo back the recieved data
                     response = data
                     if data.contains("ping"):
