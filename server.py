@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import socket
 import threading
 
@@ -22,7 +23,7 @@ class ThreadedServer(object):
             try:
                 data = client.recv(size)
                 if data:
-		    print("Got data!")
+		    print("Got data!:"+address)
                     # Set the response to echo back the recieved data
                     response = "Listening the wrong way!"
                     if data.contains("ping"):
